@@ -25,3 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@-webkit-keyframes gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+@keyframes gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.animate-gradient {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    270deg,
+    #3633cc,
+    #353dd9,
+    #3347e5,
+    #3050f2,
+    #718df1,
+    #3050f2,
+    #3347e5,
+    #353dd9,
+    #3633cc
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-animation: gradient 4.5s linear infinite;
+  animation: gradient 4.5s linear infinite;
+}
