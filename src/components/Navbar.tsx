@@ -59,7 +59,7 @@ function NavLink({ label, link, links }: NavbarLinks) {
     return (
       <li>
         <Link
-          className="block font-bold text-sm transition-colors hover:text-blue-400"
+          className="block font-bold text-sm transition-colors hover:text-primary-dark"
           href={link}
         >
           {label}
@@ -71,7 +71,7 @@ function NavLink({ label, link, links }: NavbarLinks) {
       <li>
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <Menu.Button className="flex items-center gap-1 font-bold text-sm transition-colors hover:text-blue-400">
+            <Menu.Button className="flex items-center gap-1 font-bold text-sm transition-colors hover:text-primary-dark">
               <span>{label}</span>
               <MdChevronLeft className="-rotate-90" aria-hidden="true" />
             </Menu.Button>
@@ -206,7 +206,7 @@ function MblNavLink({ label, link, links }: NavbarLinks) {
     return (
       <li>
         <Link
-          className=" block wfull py-2 font-medium transition-colors active:text-blue-400"
+          className=" block wfull py-2 font-medium transition-colors active:text-primary-dark"
           href={link}
         >
           {label}
@@ -231,7 +231,7 @@ function MblNavLink({ label, link, links }: NavbarLinks) {
                     as={Link}
                     href={l.link}
                     key={key}
-                    className="p-2  text-white active:text-blue-400"
+                    className="p-2  text-white active:text-primary-dark"
                   >
                     {l.label}
                   </Disclosure.Panel>

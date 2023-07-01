@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         primary: "#3631cc",
+        "primary-dark": "#5650ff",
       },
       fontSize: {
         "8xl": ["92px", "92px"],

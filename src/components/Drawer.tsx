@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiX } from "react-icons/fi";
 import usePortal from "react-useportal";
@@ -26,9 +27,11 @@ export default function Drawer({ children, isOpen, setIsOpen }: DrawerProps) {
       >
         <section>
           <div className="flex justify-between items-center px-5 py-6 border-b border-b-neutral-800">
-            <Image alt="logo" width={140} height={16} src="/logo-big.svg" />
+            <Link href={"/"}>
+              <Image alt="logo" width={36} height={36} src="/logo.png" />
+            </Link>
             <div className="flex items-center gap-x-2">
-              <button className="bg-primary active:translate-y-0 border text-sm font-semibold text-white active:bg-white active:text-black px-5 py-2 border-black rounded-full hover:bg-white transition-colors hover:-translate-y-1 transition-transform">
+              <button className="bg-primary active:translate-y-0 text-sm font-semibold text-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition-colors hover:-translate-y-1 transition-transform">
                 Order Now
               </button>
               <FiX
