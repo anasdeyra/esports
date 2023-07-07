@@ -19,201 +19,104 @@ export default function Navbar() {
   return (
     <header
       id="navbar"
-      className="z-40 border-b border-neutral-800  px-5 md:px-12 backdrop-blur-xl lg:fixed w-full bg-black bg-opacity-25 py-6"
+      className="z-40 shadow-sm max-w-[1440px] mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-20 pb-6"
     >
-      <nav className="max-w-[1440px] mx-auto flex justify-between items-center">
-        <Link href={"/"}>
-          <Image
-            quality={100}
-            alt="logo"
-            width={36}
-            height={36}
-            src="/logo.png"
-          />
-        </Link>
+      <nav className=" grid grid-cols-[1fr_minmax(140px,204px)_1fr] items-center justify-between">
+        {/* left links */}
 
-        <div
-          className={`flex items-center gap-x-2 ${
-            isOpen ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          <ul className="gap-x-4 mr-4 hidden lg:flex items-center">
-            {NAVLINKS.map((props, key) => (
-              <NavLink {...props} key={key} />
+        <ul className="flex justify-between grow">
+          {LEFT_LINKS.map((props, i) => (
+            <NavLink key={i} {...props} isActive={props.link == pathname} />
+          ))}
+        </ul>
+
+        <div className="relative">
+          <Image
+            alt="logo"
+            quality={100}
+            src={"/logo.png"}
+            width={140}
+            height={140}
+            className="absolute -top-[70px] left-1/2 -translate-x-1/2 "
+          />
+        </div>
+
+        {/* right links */}
+        <div className="flex gap-8 items-center grow">
+          <ul className="flex justify-between gap-4 grow">
+            {RIGHT_LINKS.map((props, i) => (
+              <NavLink key={i} {...props} isActive={props.link == pathname} />
             ))}
           </ul>
-          <button className="bg-primary active:translate-y-0 text-sm font-semibold text-white px-5 py-2 rounded-full hover:bg-white hover:text-black hover:-translate-y-1 transition-all">
-            Order Now
+          <button className=" ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0">
+            PRESALE
           </button>
-          <FiMenu
-            onClick={() => {
-              setIsOpen(true);
-            }}
-            className="transition-transform lg:hidden"
-            size={32}
-          />
-          <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-            <ul className="flex flex-col gap-y-2">
-              {" "}
-              {NAVLINKS.map((props, key) => (
-                <MblNavLink key={key} {...props} />
-              ))}
-            </ul>
-          </Drawer>
         </div>
       </nav>
     </header>
   );
 }
 
-function NavLink({ label, link, links }: NavbarLinks) {
+function NavLink({
+  label,
+  link,
+  isActive,
+}: NavbarLink & { isActive: boolean }) {
   if (link)
     return (
       <li>
         <Link
-          className="block font-bold text-sm transition-colors hover:text-primary-dark"
+          className={`block hover:text-neutral-300 font-bold transition-colors active:text-primary-dark ${
+            isActive ? "underline underline-offset-8" : ""
+          }`}
           href={link}
+          style={isActive ? { textDecorationThickness: 3 } : {}}
         >
           {label}
         </Link>
       </li>
     );
-  if (links)
-    return (
-      <li>
-        <Menu as="div" className="relative inline-block text-left">
-          <div>
-            <Menu.Button className="flex items-center gap-1 font-bold text-sm transition-colors hover:text-primary-dark">
-              <span>{label}</span>
-              <MdChevronLeft className="-rotate-90" aria-hidden="true" />
-            </Menu.Button>
-          </div>
-          <Transition
-            as={Fragment}
-            enter="transition ease-out duration-100"
-            enterFrom="transform opacity-0 scale-95"
-            enterTo="transform opacity-100 scale-100"
-            leave="transition ease-in duration-75"
-            leaveFrom="transform opacity-100 scale-100"
-            leaveTo="transform opacity-0 scale-95"
-          >
-            <Menu.Items className="absolute right-0 mt-10 w-56 origin-top-right rounded-md bg-black shadow-2xl bg-opacity-50">
-              {links.map((l, key) => (
-                <Menu.Item key={key}>
-                  {({ active }) => (
-                    <Link
-                      href={l.link}
-                      className={`${
-                        active ? " bg-primary" : ""
-                      } block transition-colors font-bold w-full items-center rounded-md px-2 py-2 text-sm`}
-                    >
-                      {l.label}
-                    </Link>
-                  )}
-                </Menu.Item>
-              ))}
-            </Menu.Items>
-          </Transition>
-        </Menu>
-      </li>
-    );
 }
-
-const NAVLINKS: NavbarLinks[] = [
-  {
-    label: "Home",
-    link: "/",
-  },
-  {
-    label: "Marketplace",
-    link: "/marketplace",
-  },
-  {
-    label: "Explore",
-    links: [
-      {
-        label: "Whitepaper",
-        link: "/whitepaper",
-      },
-      {
-        label: "Roadmap",
-        link: "/roadmap",
-      },
-      {
-        label: "Tokenomic",
-        link: "/tokenomic",
-      },
-      {
-        label: "Team",
-        link: "/team",
-      },
-    ],
-  },
-  {
-    label: "Activity",
-    links: [
-      {
-        label: "Streams",
-        link: "/streams",
-      },
-      {
-        label: "Events",
-        link: "/events",
-      },
-      {
-        label: "Tournament",
-        link: "/tournament",
-      },
-      {
-        label: "Esport team",
-        link: "/esport-team",
-      },
-    ],
-  },
-  {
-    label: "Finance",
-    links: [
-      {
-        label: "Staking",
-        link: "/staking",
-      },
-      {
-        label: "Wallet",
-        link: "/wallet",
-      },
-    ],
-  },
-  {
-    label: "Pages",
-    links: [
-      {
-        label: "Source Code",
-        link: "/source-code",
-      },
-      {
-        label: "About Us",
-        link: "/about_us",
-      },
-    ],
-  },
-  {
-    label: "Contact",
-    link: "/contact",
-  },
-];
 
 interface NavbarLink {
   label: string;
   link: string;
 }
 
-interface NavbarLinks {
-  label: string;
-  link?: string;
-  links?: NavbarLink[];
-}
+const LEFT_LINKS: NavbarLink[] = [
+  {
+    label: "HOME",
+    link: "/",
+  },
+  {
+    label: "MARKETPLACE",
+    link: "/marketplace",
+  },
+  {
+    label: "EXPLORE",
+    link: "/explore",
+  },
+  {
+    label: "ACTIVITY",
+    link: "/activity",
+  },
+];
+const RIGHT_LINKS: NavbarLink[] = [
+  {
+    label: "FINANCE",
+    link: "/finance",
+  },
+  {
+    label: "PAGES",
+    link: "/pages",
+  },
+  {
+    label: "CONTACT",
+    link: "/contact",
+  },
+];
 
-function MblNavLink({ label, link, links }: NavbarLinks) {
+function MblNavLink({ label, link }: NavbarLink) {
   if (link)
     return (
       <li>
@@ -223,35 +126,6 @@ function MblNavLink({ label, link, links }: NavbarLinks) {
         >
           {label}
         </Link>
-      </li>
-    );
-  if (links)
-    return (
-      <li>
-        <Disclosure>
-          {({ open }) => (
-            <>
-              <Disclosure.Button
-                className={`flex w-full gap-x-1 items-center rounded-lg py-2 text-left font-medium `}
-              >
-                <span>{label}</span>
-                <MdChevronLeft className="-rotate-90" aria-hidden="true" />
-              </Disclosure.Button>
-              <div className="flex flex-col">
-                {links.map((l, key) => (
-                  <Disclosure.Panel
-                    as={Link}
-                    href={l.link}
-                    key={key}
-                    className="p-2  text-white active:text-primary-dark"
-                  >
-                    {l.label}
-                  </Disclosure.Panel>
-                ))}
-              </div>
-            </>
-          )}
-        </Disclosure>
       </li>
     );
 }
