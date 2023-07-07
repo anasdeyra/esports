@@ -41,7 +41,7 @@ export default function BorderedContainer({
         height: ref.current?.clientHeight,
       });
     });
-  }, [ref, window]);
+  }, [ref]);
 
   return (
     <div className={className + " relative"} ref={ref}>
