@@ -10,7 +10,7 @@ export default function Polygon() {
         alt="polygon"
         className="mx-auto"
       />
-      <h2 className="font-bold text-6xl text-center text-black mt-6">
+      <h2 className="font-bold text-5xl md:text-5xl md:text-6xl text-center text-black mt-6">
         Powered by <br />
         Polygon chain
       </h2>

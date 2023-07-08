@@ -4,7 +4,9 @@ import ProgressBar from "@/components/ProgressBar";
 export default function Supply() {
   return (
     <div>
-      <h2 className="font-bold text-6xl pt-16 text-center">Token Supply</h2>
+      <h2 className="font-bold text-5xl md:text-6xl pt-16 text-center">
+        Token Supply
+      </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="125"
@@ -32,7 +34,7 @@ export default function Supply() {
       </BorderedContainer>
 
       <div className="mt-32 px-10 py-16 bg-slate-950 mx-auto">
-        <div className="grid grid-cols-3 justify-between divide-x-2 divide-dashed">
+        <div className="grid lg:grid-cols-3 lg:justify-between divide-y-2 lg:divide-y-0 gap-y-16 lg:divide-x-2 divide-dashed">
           <div className="text-center">
             <h3 className="font-bold text-4xl mb-1">Payement</h3>
             <span className="text-xl font-light">
@@ -40,11 +42,11 @@ export default function Supply() {
             </span>
           </div>
           <div className="text-center">
-            <h3 className="font-bold text-4xl mb-1">DeFi</h3>
+            <h3 className="font-bold text-4xl mb-1 max-lg:mt-16">DeFi</h3>
             <span className="text-xl font-light">Staking & Reward</span>
           </div>
           <div className="text-center">
-            <h3 className="font-bold text-4xl mb-1">Governance</h3>
+            <h3 className="font-bold text-4xl mb-1 max-lg:mt-16">Governance</h3>
             <span className="text-xl font-light">
               Participate in Developing
             </span>

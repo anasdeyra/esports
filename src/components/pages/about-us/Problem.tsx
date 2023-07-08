@@ -2,7 +2,7 @@ export default function Problem() {
   return (
     <div className="-mx-5 md:-mx-12 px-5 md:px-12 py-64 bg-white">
       <div className="text-black w-fit pb-8">
-        <h1 className="font-bold text-6xl tracking-tight">
+        <h1 className="font-bold text-5xl md:text-6xl tracking-tight">
           <span className="block font-light text-xl">About Problem</span>
           E-Sports <br />
           Ecosystem
@@ -12,7 +12,7 @@ export default function Problem() {
           industry by integrating blockchain technology, tokenization, and
           innovative solutions.
         </p>
-        <p className="mt-8 max-w-sm text-xl font-light ml-64">
+        <p className="mt-8 max-w-sm text-xl font-light lg:ml-64">
           Through these technologies, we aim to address challenges faced by
           players, teams, organizations, and fans, while promoting growth,
           transparency, and engagement within the esports community.

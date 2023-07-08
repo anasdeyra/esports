@@ -19,9 +19,9 @@ export default function Navbar() {
   return (
     <header
       id="navbar"
-      className="z-40 shadow-sm  mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-20 pb-6"
+      className="z-40 shadow-sm  mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-6 lg:pt-20 pb-6"
     >
-      <nav className=" grid grid-cols-[1fr_minmax(140px,204px)_1fr] items-center justify-between">
+      <nav className="hidden lg:grid grid-cols-[1fr_minmax(140px,204px)_1fr] items-center justify-between">
         {/* left links */}
 
         <ul className="flex justify-between grow">
@@ -31,14 +31,17 @@ export default function Navbar() {
         </ul>
 
         <div className="relative">
-          <Image
-            alt="logo"
-            quality={100}
-            src={"/logo.png"}
-            width={140}
-            height={140}
-            className="absolute -top-[70px] left-1/2 -translate-x-1/2 "
-          />
+          <Link href={"/"}>
+            <Image
+              alt="logo"
+              quality={100}
+              src={"/logo.png"}
+              width={140}
+              height={140}
+              className="absolute -top-[70px] left-1/2 -translate-x-1/2 "
+            />
+            <span className="sr-only">home</span>
+          </Link>
         </div>
 
         {/* right links */}
@@ -48,10 +51,38 @@ export default function Navbar() {
               <NavLink key={i} {...props} isActive={props.link == pathname} />
             ))}
           </ul>
-          <button className=" ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0">
+          <button className="text-lg px-5 py-4 ml-4 xl:ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0">
             PRESALE
           </button>
         </div>
+      </nav>
+      <nav className="lg:hidden flex items-center justify-between">
+        <Link href={"/"}>
+          <Image
+            alt="logo"
+            quality={100}
+            src={"/logo.png"}
+            width={36}
+            height={36}
+          />
+          <span className="sr-only">home</span>
+        </Link>
+
+        <button>
+          <FiMenu
+            onClick={() => {
+              setIsOpen(true);
+            }}
+            size={32}
+          />
+        </button>
+        <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+          <ul>
+            {LEFT_LINKS.concat(RIGHT_LINKS).map((props, i) => (
+              <MblNavLink {...props} key={i} />
+            ))}
+          </ul>
+        </Drawer>
       </nav>
     </header>
   );

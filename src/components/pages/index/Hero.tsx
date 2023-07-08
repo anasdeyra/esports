@@ -18,11 +18,11 @@ export default function Hero() {
           revolutionizing the esports industry <br />
           through the integration of blockchain
         </h2>
-        <div className="mt-32 mx-auto w-fit">
-          <button className="hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold">
+        <div className="flex gap-x-16 max-sm:gap-x-8 mt-32 mx-auto w-fit">
+          <button className="max-sm:text-base max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold">
             JOIN NOW
           </button>
-          <button className="hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt ml-16 px-10 py-5 text-xl font-bold">
+          <button className="max-sm:text-sm max-sm:px-6 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold">
             WHITE PAPER
           </button>
         </div>

@@ -9,8 +9,8 @@ body {
 
 .btn-cut,
 .btn-cut::after {
-  padding: 16px 20px;
-  font-size: 18px;
+  /* padding: 16px 20px;
+  font-size: 18px; */
   background: linear-gradient(
     135deg,
     transparent 10%,

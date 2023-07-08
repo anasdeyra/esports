@@ -3,16 +3,15 @@ export default function Objective() {
     <div
       style={{
         backgroundImage: "url('/objective.png')",
-        backgroundSize: "cover",
         backgroundPosition: "center 0",
         backgroundRepeat: "no-repeat",
       }}
-      className="-mx-5 md:-mx-12 py-64"
+      className="px-5 md:px-12 -mx-5 md:-mx-12 py-64 md:bg-cover"
     >
-      <div className="grid grid-cols-2">
+      <div className="grid lg:grid-cols-2">
         <div></div>
         <div>
-          <h1 className="font-bold text-6xl tracking-tight">
+          <h1 className="font-bold text-5xl md:text-6xl tracking-tight">
             <span className="block font-light text-xl">
               About E-Sports DAO{" "}
             </span>

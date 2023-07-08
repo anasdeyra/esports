@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Tokenomics() {
   return (
     <div className="mt-32">
-      <h2 className="font-bold text-6xl text-center">Tokenomics</h2>
+      <h2 className="font-bold text-5xl md:text-6xl text-center">Tokenomics</h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="125"
@@ -29,16 +29,16 @@ export default function Tokenomics() {
         src={"/bar.png"}
         width={1224}
         height={57}
-        className="mx-auto mt-16 w-full "
+        className="mx-auto mt-16 w-full max-sm:hidden"
       />
 
-      <div className="mt-32 grid grid-cols-2  divide-x-2 divide-dashed">
-        <ul className="flex flex-col gap-y-5 items-center">
+      <div className="mt-32 grid lg:grid-cols-2 max-lg:divide-y-2  lg:divide-x-2 divide-dashed">
+        <ul className="flex flex-col gap-y-5 items-center max-lg:mb-16">
           {LEFT.map((props, i) => (
             <Chip key={i} {...props} />
           ))}
         </ul>
-        <ul className="flex flex-col gap-y-5 items-center">
+        <ul className="flex flex-col gap-y-5 items-center max-lg:pt-16">
           {RIGHT.map((props, i) => (
             <Chip key={i} {...props} />
           ))}

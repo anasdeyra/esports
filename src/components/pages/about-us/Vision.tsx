@@ -1,7 +1,9 @@
 export default function Vision() {
   return (
     <div className="pt-28">
-      <h2 className="font-bold text-6xl pt-16 text-center">Our Vision</h2>
+      <h2 className="font-bold text-5xl md:text-6xl pt-16 text-center">
+        Our Vision
+      </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="125"
@@ -38,7 +40,7 @@ export default function Vision() {
         />
       </svg>
 
-      <h3 className="font-bold text-6xl mt-32">
+      <h3 className="font-bold text-5xl md:text-6xl mt-32">
         Our <br /> Project
       </h3>
 
@@ -50,7 +52,7 @@ export default function Vision() {
         <li>Host esports conferences and meetups</li>
         <li>Organizing charity events</li>
       </ul>
-      <ul className="pl-8 border-l border-dashed mt-8 text-xl font-light list-disc max-w-xl ml-32">
+      <ul className="pl-8 border-l border-dashed mt-8 text-xl font-light list-disc max-w-xl lg:ml-32">
         <li>
           Host a wide variety of events: uch as player meet and greet, autograph
           sessions, discussion panels, cosplay contests
@@ -65,7 +67,7 @@ export default function Vision() {
         </li>
       </ul>
       <div className="w-fit ml-auto pl-4 border-l border-dashed">
-        <h3 className="font-bold text-6xl mt-32">
+        <h3 className="font-bold text-5xl md:text-6xl mt-32">
           Our <br /> Product
         </h3>
 

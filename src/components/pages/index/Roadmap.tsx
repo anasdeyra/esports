@@ -1,7 +1,9 @@
 export default function Roadmap() {
   return (
     <div className="py-16">
-      <h2 className="font-bold text-6xl text-center">Our Roadmap</h2>
+      <h2 className="font-bold text-5xl md:text-6xl text-center">
+        Our Roadmap
+      </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="125"
@@ -26,15 +28,15 @@ export default function Roadmap() {
                 </ul>
               </div>
               <div
-                className=" w-fit h-fit bg-no-repeat p-16"
+                className=" w-fit h-fit bg-no-repeat py-16 px-8 max-md:hidden"
                 style={{
                   backgroundImage: "url(/a.png)",
-                  backgroundSize: "contain",
+                  backgroundSize: "100% 100%",
                   backgroundPosition: "center 0",
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <span className="font-bold text-6xl text-center block">
+                <span className="font-bold text-5xl md:text-6xl text-center block">
                   {title.substring(0, 2)} <br />
                   {title.substring(2)}
                 </span>
@@ -45,19 +47,19 @@ export default function Roadmap() {
         <div className="flex flex-col gap-14 mt-32">
           {QUARTERS.slice(2).map(({ title, items }, i) => (
             <div
-              className="grid grid-cols-[1fr_minmax(0,360px)] justify-between"
+              className="grid md:grid-cols-[1fr_minmax(0,360px)] justify-end md:justify-between"
               key={i}
             >
               <div
-                className=" w-fit h-fit bg-no-repeat p-16"
+                className=" w-fit h-fit bg-no-repeat py-16 px-8 max-md:hidden"
                 style={{
                   backgroundImage: "url(/a.png)",
-                  backgroundSize: "contain",
+                  backgroundSize: "100% 100%",
                   backgroundPosition: "center 0",
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <span className="font-bold text-6xl text-center block">
+                <span className="font-bold text-5xl md:text-6xl text-center block">
                   {title.substring(0, 2)} <br />
                   {title.substring(2)}
                 </span>
