@@ -4,7 +4,7 @@ import { FaDiscord, FaTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto max-w-[1440px] mx-auto bg-black">
+    <footer className="mt-auto  mx-auto bg-black">
       <div className=" border-neutral-700 border-t py-12 px-5 md:px-12 flex gap-16 lg:justify-between items-start flex-col lg:flex-row">
         <div className="flex gap-2 items-center">
           <Link href={"/"}>

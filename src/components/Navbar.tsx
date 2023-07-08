@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header
       id="navbar"
-      className="z-40 shadow-sm max-w-[1440px] mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-20 pb-6"
+      className="z-40 shadow-sm  mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-20 pb-6"
     >
       <nav className=" grid grid-cols-[1fr_minmax(140px,204px)_1fr] items-center justify-between">
         {/* left links */}

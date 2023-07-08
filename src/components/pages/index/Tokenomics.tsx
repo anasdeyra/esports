@@ -32,7 +32,7 @@ export default function Tokenomics() {
         className="mx-auto mt-16 w-full "
       />
 
-      <div className="mt-32 grid grid-cols-2  divide-x-2 divide-dotted">
+      <div className="mt-32 grid grid-cols-2  divide-x-2 divide-dashed">
         <ul className="flex flex-col gap-y-5 items-center">
           {LEFT.map((props, i) => (
             <Chip key={i} {...props} />

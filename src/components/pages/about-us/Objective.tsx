@@ -1,21 +1,25 @@
-export default function What() {
+export default function Objective() {
   return (
     <div
       style={{
-        backgroundImage: "url('/what.png')",
+        backgroundImage: "url('/objective.png')",
         backgroundSize: "cover",
         backgroundPosition: "center 0",
         backgroundRepeat: "no-repeat",
       }}
-      className="-mx-5 md:-mx-12 px-5 md:px-12 pt-48 pb-56"
+      className="-mx-5 md:-mx-12 py-64"
     >
-      <div className="w-fit">
-        <div className="relative border-b-white border-b-2 b-r-half px-5 pb-8 w-fit">
+      <div className="grid grid-cols-2">
+        <div></div>
+        <div>
           <h1 className="font-bold text-6xl tracking-tight">
-            <span className="block font-light text-xl">What is </span>
-            E-Sports DAO?
+            <span className="block font-light text-xl">
+              About E-Sports DAO{" "}
+            </span>
+            Our <br />
+            Objective
           </h1>
-          <p className="mt-16 max-w-[735px] text-3xl font-light">
+          <p className="mt-8 max-w-sm pl-4 border-l-2 border-white border-dashed ml-16 text-xl font-light">
             E-sports DAO is a community that builds and provides the E-sports
             industry. On early stage we will focus on building an E-sports team
             in Indonesia and after that we will expand to the world wide. Our
@@ -23,9 +27,6 @@ export default function What() {
             Merchandise, Advertising, etc.
           </p>
         </div>
-        <button className="ml-auto block mt-14  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold">
-          EXPLORE
-        </button>
       </div>
     </div>
   );

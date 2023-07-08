@@ -3,11 +3,11 @@ export default function Hero() {
     <div
       style={{
         backgroundImage: "url('/hero.webp')",
-        backgroundSize: "100% 100%",
+        backgroundSize: "cover",
         backgroundPosition: "center 0",
         backgroundRepeat: "no-repeat",
       }}
-      className="-mx-5 md:-mx-12 pt-44 pb-52"
+      className="-mx-5 md:-mx-12 px-5 md:px-12 pt-44 pb-52"
     >
       <div className="z-[1]">
         <h1 className="font-black text-6xl md:text-8xl mx-auto text-center tracking-tight">

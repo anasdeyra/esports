@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body id="root" className={space_grotesk.className}>
         <Navbar />
-        <div className="max-w-[1440px] mx-auto mb-64">
+        <div className=" mx-auto mb-64">
           <main className="px-5 md:px-12">{children}</main>
         </div>
         <Footer />
