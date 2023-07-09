@@ -2,7 +2,7 @@ export default function Objective() {
   return (
     <div
       style={{
-        backgroundImage: "url('/objective.png')",
+        backgroundImage: "url('/objective.webp')",
         backgroundPosition: "center 0",
         backgroundRepeat: "no-repeat",
       }}

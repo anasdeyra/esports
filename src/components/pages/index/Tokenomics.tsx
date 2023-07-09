@@ -18,7 +18,7 @@ export default function Tokenomics() {
 
       <Image
         alt="tokenomics pie chart"
-        src={"/chart.png"}
+        src={"/chart.webp"}
         width={785}
         height={393}
         className="mx-auto mt-32    "
@@ -26,7 +26,7 @@ export default function Tokenomics() {
 
       <Image
         alt="tokenomics bar chart"
-        src={"/bar.png"}
+        src={"/bar.webp"}
         width={1224}
         height={57}
         className="mx-auto mt-16 w-full max-sm:hidden"

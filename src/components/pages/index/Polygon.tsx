@@ -4,7 +4,7 @@ export default function Polygon() {
   return (
     <div className="bg-[#DCDCDC] pt-28 -mx-5 md:-mx-12 pb-64">
       <Image
-        src={"/polygon.png"}
+        src={"/polygon.webp"}
         width={96}
         height={96}
         alt="polygon"

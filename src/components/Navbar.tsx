@@ -35,7 +35,7 @@ export default function Navbar() {
             <Image
               alt="logo"
               quality={100}
-              src={"/logo.png"}
+              src={"/logo.webp"}
               width={140}
               height={140}
               className="absolute -top-[70px] left-1/2 -translate-x-1/2 "
@@ -61,7 +61,7 @@ export default function Navbar() {
           <Image
             alt="logo"
             quality={100}
-            src={"/logo.png"}
+            src={"/logo.webp"}
             width={36}
             height={36}
           />

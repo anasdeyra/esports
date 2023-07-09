@@ -2,7 +2,7 @@ export default function What() {
   return (
     <div
       style={{
-        backgroundImage: "url('/what.png')",
+        backgroundImage: "url('/what.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center 0",
         backgroundRepeat: "no-repeat",

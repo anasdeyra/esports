@@ -13,7 +13,7 @@ export default function Footer() {
               alt="logo"
               width={36}
               height={36}
-              src="/logo.png"
+              src="/logo.webp"
             />
           </Link>
           <span className="text-2xl font-medium">Esports Dao</span>

@@ -30,7 +30,7 @@ export default function Roadmap() {
               <div
                 className=" w-fit h-fit bg-no-repeat py-16 px-8 max-md:hidden"
                 style={{
-                  backgroundImage: "url(/a.png)",
+                  backgroundImage: "url(/a.webp)",
                   backgroundSize: "100% 100%",
                   backgroundPosition: "center 0",
                   backgroundRepeat: "no-repeat",
@@ -53,7 +53,7 @@ export default function Roadmap() {
               <div
                 className=" w-fit h-fit bg-no-repeat py-16 px-8 max-md:hidden"
                 style={{
-                  backgroundImage: "url(/a.png)",
+                  backgroundImage: "url(/a.webp)",
                   backgroundSize: "100% 100%",
                   backgroundPosition: "center 0",
                   backgroundRepeat: "no-repeat",

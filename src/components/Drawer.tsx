@@ -28,7 +28,7 @@ export default function Drawer({ children, isOpen, setIsOpen }: DrawerProps) {
         <section>
           <div className="flex justify-between items-center px-5 py-6 bg-black bg-opacity-80 backdrop-blur-3xl">
             <Link href={"/"}>
-              <Image alt="logo" width={36} height={36} src="/logo.png" />
+              <Image alt="logo" width={36} height={36} src="/logo.webp" />
             </Link>
             <div className="flex items-center gap-x-2">
               <button className="glitch btn-cut transition-transform active:brightness-[0.85] px-4 py-3 text-sm">
