@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Objective() {
   return (
     <div
@@ -10,7 +14,11 @@ export default function Objective() {
     >
       <div className="grid lg:grid-cols-2">
         <div></div>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
           <h1 className="font-bold text-5xl md:text-6xl tracking-tight">
             <span className="block font-light text-xl">
               About E-Sports DAO{" "}
@@ -18,14 +26,19 @@ export default function Objective() {
             Our <br />
             Objective
           </h1>
-          <p className="mt-8 max-w-sm pl-4 border-l-2 border-white border-dashed ml-16 text-xl font-light">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="mt-8 max-w-sm pl-4 border-l-2 border-white border-dashed ml-16 text-xl font-light"
+          >
             E-sports DAO is a community that builds and provides the E-sports
             industry. On early stage we will focus on building an E-sports team
             in Indonesia and after that we will expand to the world wide. Our
             product will be a gaming shop that provides in-game items,
             Merchandise, Advertising, etc.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
     </div>
   );

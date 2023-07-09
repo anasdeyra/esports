@@ -1,10 +1,22 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Vision() {
   return (
     <div className="pt-28">
-      <h2 className="font-bold text-5xl md:text-6xl pt-16 text-center">
+      <motion.h2
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="font-bold text-5xl md:text-6xl pt-16 text-center"
+      >
         Our Vision
-      </h2>
-      <svg
+      </motion.h2>
+      <motion.svg
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: 1 }}
         xmlns="http://www.w3.org/2000/svg"
         width="125"
         height="4"
@@ -13,11 +25,21 @@ export default function Vision() {
         className="mx-auto mt-4"
       >
         <path d="M125 0H0V1.5H29L39 3.5H87.5L96.5 1.5H125V0Z" fill="#ffffff" />
-      </svg>
-      <span className="text-center block font-light text-xl mt-2">
+      </motion.svg>
+      <motion.span
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: 1 }}
+        className="text-center block font-light text-xl mt-2"
+      >
         E-sports DAO
-      </span>
-      <p className="text-center text-xl font-light mt-8 max-w-xl mx-auto">
+      </motion.span>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="text-center text-xl font-light mt-8 max-w-xl mx-auto"
+      >
         Our vision for the future is to create a thriving and sustainable
         esports ecosystem that empowers players, rewards fan participation, and
         drives innovation. We envision a future where esports is accessible to
@@ -25,7 +47,7 @@ export default function Vision() {
         fans can actively engage and contribute to the community. Through
         continuous development, collaboration, and technological advancements,
         we strive to shape the future of esports.
-      </p>
+      </motion.p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="350"
@@ -40,48 +62,95 @@ export default function Vision() {
         />
       </svg>
 
-      <h3 className="font-bold text-5xl md:text-6xl mt-32">
+      <motion.h3
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="font-bold text-5xl md:text-6xl mt-32"
+      >
         Our <br /> Project
-      </h3>
+      </motion.h3>
 
-      <ul className="pl-8 border-l border-dashed  mt-12  text-xl font-light list-disc max-w-xl">
-        <li>
+      <motion.ul
+        layout
+        initial={"hidden"}
+        whileInView={"show"}
+        variants={container}
+        className="pl-8 border-l border-dashed  mt-12  text-xl font-light list-disc max-w-xl"
+      >
+        <motion.li variants={child}>
           Holding small tournaments every month and big tournaments every year
-        </li>
-        <li>Form an international esports team</li>
-        <li>Host esports conferences and meetups</li>
-        <li>Organizing charity events</li>
-      </ul>
-      <ul className="pl-8 border-l border-dashed mt-8 text-xl font-light list-disc max-w-xl lg:ml-32">
-        <li>
+        </motion.li>
+        <motion.li variants={child}>
+          Form an international esports team
+        </motion.li>
+        <motion.li variants={child}>
+          Host esports conferences and meetups
+        </motion.li>
+        <motion.li variants={child}>Organizing charity events</motion.li>
+      </motion.ul>
+      <motion.ul
+        layout
+        initial={"hidden"}
+        whileInView={"show"}
+        variants={container}
+        className="pl-8 border-l border-dashed mt-8 text-xl font-light list-disc max-w-xl lg:ml-32"
+      >
+        <motion.li variants={child}>
           Host a wide variety of events: uch as player meet and greet, autograph
           sessions, discussion panels, cosplay contests
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={child}>
           Bringing investors and fundraisers together: support the growth of
           small esports teams or organizations
-        </li>
-        <li>
+        </motion.li>
+        <motion.li variants={child}>
           Supporting the esports ecosystem: Through financial support, resources
           and assistance in various forms
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
       <div className="w-fit ml-auto pl-4 border-l border-dashed">
-        <h3 className="font-bold text-5xl md:text-6xl mt-32">
+        <motion.h3
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="font-bold text-5xl md:text-6xl mt-32"
+        >
           Our <br /> Product
-        </h3>
+        </motion.h3>
 
-        <ul className=" ml-8 mt-8  text-xl font-light list-disc max-w-xl">
-          <li>NFT </li>
+        <motion.ul
+          layout
+          initial={"hidden"}
+          whileInView={"show"}
+          variants={container}
+          className=" ml-8 mt-8  text-xl font-light list-disc max-w-xl"
+        >
+          <motion.li variants={child}>NFT </motion.li>
 
-          <li>IN-GAME PURCHASE</li>
-          <li>MARKETPLACE</li>
-          <li>LIVESTREAMING PLATFORMS</li>
-          <li>SPONSORSHIP & ADVERTISEMENT </li>
+          <motion.li variants={child}>IN-GAME PURCHASE</motion.li>
+          <motion.li variants={child}>MARKETPLACE</motion.li>
+          <motion.li variants={child}>LIVESTREAMING PLATFORMS</motion.li>
+          <motion.li variants={child}>SPONSORSHIP & ADVERTISEMENT </motion.li>
 
-          <li>COACHING CLINIC</li>
-        </ul>
+          <motion.li variants={child}>COACHING CLINIC</motion.li>
+        </motion.ul>
       </div>
     </div>
   );
 }
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const child = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
