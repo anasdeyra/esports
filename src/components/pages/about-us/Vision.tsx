@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Vision() {
   return (
-    <div className="pt-28">
+    <div className="pt-28 max-w-[1440px] mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -109,33 +109,24 @@ export default function Vision() {
           and assistance in various forms
         </motion.li>
       </motion.ul>
-      <div className="w-fit ml-auto pl-4 border-l border-dashed">
-        <motion.h3
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="font-bold text-5xl md:text-6xl mt-32"
-        >
-          Our <br /> Product
-        </motion.h3>
-
-        <motion.ul
-          layout
-          initial={"hidden"}
-          whileInView={"show"}
-          variants={container}
-          className=" ml-8 mt-8  text-xl font-light list-disc max-w-xl"
-        >
-          <motion.li variants={child}>NFT </motion.li>
-
-          <motion.li variants={child}>IN-GAME PURCHASE</motion.li>
-          <motion.li variants={child}>MARKETPLACE</motion.li>
-          <motion.li variants={child}>LIVESTREAMING PLATFORMS</motion.li>
-          <motion.li variants={child}>SPONSORSHIP & ADVERTISEMENT </motion.li>
-
-          <motion.li variants={child}>COACHING CLINIC</motion.li>
-        </motion.ul>
-      </div>
+      <motion.h3
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="font-bold text-5xl md:text-6xl mt-32 text-center"
+      >
+        Our Product
+      </motion.h3>
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="p-28 w-full text-center mt-8"
+        style={{ backgroundImage: "url('/product.png')" }}
+      >
+        NFT | IN-GAME PURCHASE | MARKETPLACE | LIVESTREAMING PLATFORMS |
+        SPONSORSHIP & ADVERTISEMENT | COACHING CLINIC
+      </motion.div>
     </div>
   );
 }

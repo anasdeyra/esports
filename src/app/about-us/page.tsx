@@ -1,3 +1,4 @@
+import ContactUs from "@/components/pages/about-us/ContactUs";
 import Objective from "@/components/pages/about-us/Objective";
 import Problem from "@/components/pages/about-us/Problem";
 import Vision from "@/components/pages/about-us/Vision";
@@ -8,6 +9,7 @@ export default function AboutUs() {
       <Objective />
       <Problem />
       <Vision />
+      <ContactUs />
     </>
   );
 }

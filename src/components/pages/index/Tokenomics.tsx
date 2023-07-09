@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Tokenomics() {
   return (
-    <div className="mt-32">
+    <div className="mt-32 mx-auto max-w-[1440px]">
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Tokenomics() {
           src={"/bar.webp"}
           width={1224}
           height={57}
-          className="mx-auto mt-16 w-full max-sm:hidden"
+          className="mx-auto mt-16 w-full max-sm:hidden max-w-[1224px]"
         />
       </motion.div>
 

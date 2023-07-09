@@ -2,6 +2,7 @@ import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Socials from "@/components/Socials";
 
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -21,7 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body id="root" className={space_grotesk.className}>
         <Navbar />
-        <div className=" mx-auto mb-64">
+        <Socials />
+        <div className=" mx-auto mb-64 ">
           <main className="px-5 md:px-12">{children}</main>
         </div>
         <Footer />
