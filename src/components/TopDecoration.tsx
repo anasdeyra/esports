@@ -17,7 +17,7 @@ export default function TopDecoration() {
         width="8"
         height="8"
         fill="white"
-        fill-opacity="0.69"
+        fillOpacity="0.69"
       />
       <rect
         x="37"
@@ -25,7 +25,7 @@ export default function TopDecoration() {
         width="8"
         height="8"
         fill="white"
-        fill-opacity="0.69"
+        fillOpacity="0.69"
       />
       <rect
         x="37"
@@ -33,7 +33,7 @@ export default function TopDecoration() {
         width="8"
         height="8"
         fill="white"
-        fill-opacity="0.69"
+        fillOpacity="0.69"
       />
     </svg>
   );
