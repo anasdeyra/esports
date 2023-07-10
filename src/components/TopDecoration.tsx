@@ -9,7 +9,7 @@ export default function TopDecoration() {
       <path
         d="M1 76.5V12L11.5 1H76.5C79.2614 1 81.5 3.23858 81.5 6V71L70.5 81.5H6C3.23858 81.5 1 79.2614 1 76.5Z"
         stroke="#F1F0EC"
-        stroke-opacity="0.51"
+        strokeOpacity="0.51"
       />
       <rect
         x="37"

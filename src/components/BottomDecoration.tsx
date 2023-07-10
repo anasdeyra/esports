@@ -12,8 +12,8 @@ export default function BottomDecoration() {
         <path
           d="M2 0V28H29"
           stroke="white"
-          stroke-opacity="0.5"
-          stroke-width="3"
+          strokeOpacity="0.5"
+          strokeWidth="3"
         />
       </svg>
       <svg
@@ -27,8 +27,8 @@ export default function BottomDecoration() {
         <path
           d="M26 0V27H0"
           stroke="white"
-          stroke-opacity="0.5"
-          stroke-width="3"
+          strokeOpacity="0.5"
+          strokeWidth="3"
         />
       </svg>
     </>

@@ -33,7 +33,7 @@ export default function ContactUs() {
           />
         </motion.svg>
       </div>
-      <div className="grid md:grid-cols-2 gap-x-20 mt-8">
+      <div className="grid md:grid-cols-2 gap-y-8 gap-x-20 mt-8">
         <div>
           <p className="text-xl ">
             Proin gravida nibh vel velit auctor aliquet. Aenean velit
@@ -41,9 +41,10 @@ export default function ContactUs() {
             ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
             vulputate cursus a sit amet mauris.
           </p>
-          <nav className="gap-3 flex mt-16 ">
+          <nav className="gap-3 flex mt-16 flex-wrap">
             {SOCIALS.map(({ Icon, link }, i) => (
               <Link
+                target="_blank"
                 className="p-4 border-4 border-white border-opacity-5 rounded-full block"
                 key={i}
                 href={link}
