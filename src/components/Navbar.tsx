@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <header
       id="navbar"
-      className="z-40 shadow-sm  mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-6 xl:pt-20 pb-6"
+      className="z-40 shadow-sm absolute mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-6 xl:pt-20 pb-6"
     >
       <nav className="flex items-center ">
         <div className="grow">

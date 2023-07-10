@@ -24,7 +24,7 @@ export default function RootLayout({
       <body id="root" className={space_grotesk.className}>
         <Navbar />
         <Socials />
-        <div className=" mx-auto mb-64 ">
+        <div className=" mx-auto mb-64 pt-[84px] xl:pt-[154px]">
           <main className="px-5 md:px-12">
             <RootStyleRegistry>{children}</RootStyleRegistry>
           </main>

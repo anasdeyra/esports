@@ -12,11 +12,10 @@ export default function Hero() {
         backgroundSize: "cover",
         backgroundPosition: "center 0",
         backgroundRepeat: "no-repeat",
-        zIndex: -1,
       }}
       className="-mx-5 md:-mx-12 px-5 md:px-12 pt-44 pb-52 relative"
     >
-      <div className="z-[1]">
+      <div>
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.5 }}
