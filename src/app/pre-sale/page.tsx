@@ -65,14 +65,13 @@ export default function PreSale() {
               className="md:col-span-2 md:-mt-5 px-3 py-5  block border border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
             />
           </form>
-          <div className="mt-5">
+          <div className="mt-5 relative z-[1]">
             <div className="flex items-center mb-4">
               <input
                 id="agree"
                 name="agree"
                 type="checkbox"
-                value=""
-                className="w-4 h-4 text-[#ACACAC] bg-transparent border-[#ACACAC]"
+                className="w-4 h-4 cursor-pointer text-[#ACACAC] bg-transparent border-[#ACACAC]"
               />
               <label htmlFor="agree" className="ml-2 text-sm text-[#ACACAC]">
                 Terms & Agreement
