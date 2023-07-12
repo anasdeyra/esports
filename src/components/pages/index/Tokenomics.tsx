@@ -8,7 +8,7 @@ import TopBrackets from "@/components/TopBrackets";
 
 export default function Tokenomics() {
   return (
-    <div className="mt-32 pb-28 -mx-5 md:-mx-12 px-5 relative md:px-12 bg-[#DCDCDC]">
+    <div className=" pb-28 -mx-5 md:-mx-12 px-5 relative md:px-12 bg-[#DCDCDC]">
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Tokenomics() {
       >
         <Image
           alt="tokenomics bar chart"
-          src={"/bar.webp"}
+          src={"/bar.png"}
           width={1224}
           height={57}
           className="mx-auto mt-32 w-full max-sm:hidden max-w-[1224px]"
@@ -92,8 +92,12 @@ export default function Tokenomics() {
           ))}
         </motion.ul>
       </div>
+
+      {/* details  */}
       <BottomDecoration color="black" />
       <TopBrackets color="black" />
+      {/* small details  */}
+      <img src="/b.png" alt="b" className="absolute top-0 left-2 md:left-20" />
     </div>
   );
 }
@@ -123,15 +127,15 @@ const item = {
 };
 
 const LEFT = [
-  { text: "Ecosystem", color: "#5F008B" },
-  { text: "Staking", color: "#8C52FF" },
-  { text: "Liquidity", color: "#2C2BAC" },
-  { text: "Team and Advisor", color: "#AFAFB8" },
+  { text: "Ecosystem", color: "#5F008B", percentage: "25%" },
+  { text: "Staking", color: "#8C52FF", percentage: "10%" },
+  { text: "Liquidity", color: "#2C2BAC", percentage: "5%" },
+  { text: "Team and Advisor", color: "#AFAFB8", percentage: "15%" },
 ];
 
 const RIGHT = [
-  { text: "Seeds", color: "#FFBD59" },
-  { text: "Pre-Sale", color: "#0080B3" },
-  { text: "Launchpad", color: "#00C2CB" },
-  { text: "Treasury", color: "#7E91E9" },
+  { text: "Seeds", color: "#FFBD59", percentage: "5%" },
+  { text: "Pre-Sale", color: "#0080B3", percentage: "10%" },
+  { text: "Launchpad", color: "#00C2CB", percentage: "5%" },
+  { text: "Treasury", color: "#7E91E9", percentage: "25%" },
 ];

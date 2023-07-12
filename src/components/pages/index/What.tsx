@@ -1,6 +1,7 @@
 "use client";
 
 import BottomDecoration from "@/components/BottomDecoration";
+import TopBrackets from "@/components/TopBrackets";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -55,7 +56,8 @@ export default function What() {
         </motion.button>
       </div>
 
-      <BottomDecoration />
+      <BottomDecoration color="black" />
+      <TopBrackets color="black" />
     </div>
   );
 }

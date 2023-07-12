@@ -8,7 +8,7 @@ import TopDecoration from "@/components/TopDecoration";
 
 export default function OurTeam() {
   return (
-    <div className=" max-w-[1440px] mx-auto relative mt-24">
+    <div className=" max-w-[1440px] mx-auto relative pt-24 pb-56">
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

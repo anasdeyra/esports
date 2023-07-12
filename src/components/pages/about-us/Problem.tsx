@@ -1,5 +1,7 @@
 "use client";
 
+import BottomDecoration from "@/components/BottomDecoration";
+import TopBrackets from "@/components/TopBrackets";
 import { motion } from "framer-motion";
 
 export default function Problem() {
@@ -73,6 +75,8 @@ export default function Problem() {
             "linear-gradient(180deg, #000 16.20%, rgba(74, 74, 74, 0.00) 92.28%)",
         }}
       />
+      <TopBrackets />
+      <BottomDecoration />
     </div>
   );
 }

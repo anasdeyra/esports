@@ -1,6 +1,14 @@
-export default function Chip({ color, text }: { color: string; text: string }) {
+export default function Chip({
+  color,
+  text,
+  percentage,
+}: {
+  color: string;
+  text: string;
+  percentage: string;
+}) {
   return (
-    <li className="relative text-black text-center w-[250px] md:w-[350px]  font-light text-sm md:text-xl py-4 pr-16 md:pr-24 flex pl-8">
+    <li className="relative text-black text-center w-[250px] md:w-[350px] justify-between pr-6 font-light text-sm md:text-xl py-4  flex pl-8">
       <svg
         viewBox="0 0 352 54"
         fill="none"
@@ -14,6 +22,7 @@ export default function Chip({ color, text }: { color: string; text: string }) {
         />
       </svg>
       <span>{text}</span>
+      <span>{percentage}</span>
     </li>
   );
 }

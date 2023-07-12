@@ -1,5 +1,6 @@
 "use client";
 
+import BottomDecoration from "@/components/BottomDecoration";
 import { motion } from "framer-motion";
 
 export default function Roadmap() {
@@ -154,6 +155,7 @@ export default function Roadmap() {
           </div>
         </div>
       </div>
+      <BottomDecoration />
     </div>
   );
 }

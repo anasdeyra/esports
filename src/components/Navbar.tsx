@@ -17,11 +17,11 @@ export default function Navbar() {
   return (
     <header
       id="navbar"
-      className="z-40 shadow-sm fixed mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black  pt-6 xl:pt-20 pb-6"
+      className="z-40 shadow-sm fixed mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black  py-6"
     >
       <nav className="flex items-center ">
         <div className="grow">
-          <div className="w-fit mx-auto hidden xl:grid grid-cols-[1fr_minmax(285px,285px)_1fr] items-center justify-center">
+          <div className="w-fit mx-auto hidden xl:grid grid-cols-[1fr_minmax(185px,185px)_1fr] items-center justify-center">
             {/* left links */}
             <ul className="flex gap-8 justify-end">
               {LEFT_LINKS.map((props, i) => (
@@ -34,9 +34,9 @@ export default function Navbar() {
                   alt="logo"
                   quality={100}
                   src={"/logo.webp"}
-                  width={140}
-                  height={140}
-                  className="absolute -top-[70px] left-1/2 -translate-x-1/2 "
+                  width={96}
+                  height={96}
+                  className=" mx-auto"
                 />
                 <span className="sr-only">home</span>
               </Link>

@@ -1,11 +1,13 @@
 "use client";
 
+import BottomDecoration from "@/components/BottomDecoration";
+import TopBrackets from "@/components/TopBrackets";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Polygon() {
   return (
-    <div className="bg-[#DCDCDC] pt-28 -mx-5 md:-mx-12 px-5 md:px-12 pb-64">
+    <div className="bg-[#DCDCDC] relative pt-28 -mx-5 md:-mx-12 px-5 md:px-12 pb-64">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
@@ -39,6 +41,8 @@ export default function Polygon() {
         POS ensures asset security using the robust Plasma bridging framework
         and a decentralized network of Proof-of-Stake (PoS) validators.
       </motion.p>
+      <BottomDecoration color="black" />
+      <TopBrackets color="black" />
     </div>
   );
 }
