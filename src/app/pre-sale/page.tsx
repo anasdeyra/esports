@@ -49,6 +49,7 @@ export default function PreSale() {
             <div>
               <input
                 placeholder="Amount"
+                defaultValue={30000}
                 name="amount"
                 type="number"
                 className="w-full px-3 py-5  block border border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
