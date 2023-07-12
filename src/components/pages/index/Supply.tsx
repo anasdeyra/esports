@@ -4,7 +4,6 @@ import BorderedContainer from "@/components/BorderedContainer";
 import ProgressBar from "@/components/ProgressBar";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Supply() {
   return (

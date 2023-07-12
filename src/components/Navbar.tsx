@@ -1,5 +1,4 @@
 "use client";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { FiMenu } from "react-icons/fi";
 import Drawer from "./Drawer";
@@ -18,7 +17,7 @@ export default function Navbar() {
   return (
     <header
       id="navbar"
-      className="z-40 shadow-sm absolute mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black bg-opacity-25 pt-6 xl:pt-20 pb-6"
+      className="z-40 shadow-sm fixed mx-auto  px-5 md:px-12 backdrop-blur-xl w-full bg-black  pt-6 xl:pt-20 pb-6"
     >
       <nav className="flex items-center ">
         <div className="grow">
@@ -53,9 +52,12 @@ export default function Navbar() {
                   />
                 ))}
               </ul>
-              <button className="text-lg px-5 py-4 ml-4 xl:ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0">
+              <Link
+                href={"/pre-sale"}
+                className="text-lg px-5 py-4 ml-4 xl:ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0"
+              >
                 PRESALE
-              </button>
+              </Link>
             </div>
           </div>
         </div>

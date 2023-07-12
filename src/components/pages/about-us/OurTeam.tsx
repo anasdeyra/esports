@@ -4,27 +4,16 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import Link from "next/link";
+import TopDecoration from "@/components/TopDecoration";
 
 export default function OurTeam() {
   return (
-    <div className="pt-6 max-w-[1440px] mx-auto relative">
-      <svg
-        className="absolute left-0 top-0 w-full z-[-1]"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 237"
-        fill="none"
-      >
-        <path
-          d="M77.4031 237H0V-1.52588e-05H1440V98.2551H160.838L113.089 125.788L77.4031 237Z"
-          fill="#1A244F"
-          fillOpacity="0.5"
-        />
-      </svg>
+    <div className=" max-w-[1440px] mx-auto relative mt-24">
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="font-bold text-5xl md:text-6xl text-center"
+        className="font-bold text-5xl pt-24 md:text-6xl text-center"
       >
         Our Team
       </motion.h2>
@@ -84,6 +73,7 @@ export default function OurTeam() {
           </Carousel.Slide>
         ))}
       </Carousel>
+      <TopDecoration />
     </div>
   );
 }

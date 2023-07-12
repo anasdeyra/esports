@@ -25,7 +25,7 @@ export default function RootLayout({
         <Navbar />
         <Socials />
         <div className=" mx-auto mb-64 pt-[84px] xl:pt-[154px]">
-          <main className="px-5 md:px-12">
+          <main className="px-5 md:px-12 overflow-x-hidden">
             <RootStyleRegistry>{children}</RootStyleRegistry>
           </main>
         </div>

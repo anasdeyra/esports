@@ -19,7 +19,7 @@ export default function Drawer({ children, isOpen, setIsOpen }: DrawerProps) {
     <Portal>
       <main
         className={
-          " fixed overflow-hidden z-40 bg-black bg-opacity-50 backdrop-blur-xl inset-0 transform ease-in-out " +
+          " fixed overflow-hidden z-50 bg-black bg-opacity-50 backdrop-blur-xl inset-0 transform ease-in-out " +
           (isOpen
             ? " transition-opacity opacity-100 duration-500 translate-x-0  "
             : "opacity-0 -translate-x-full  ")
@@ -31,9 +31,12 @@ export default function Drawer({ children, isOpen, setIsOpen }: DrawerProps) {
               <Image alt="logo" width={36} height={36} src="/logo.webp" />
             </Link>
             <div className="flex items-center gap-x-2">
-              <button className="glitch btn-cut transition-transform active:brightness-[0.85] px-4 py-3 text-sm">
+              <Link
+                href={"/pre-sale"}
+                className="glitch btn-cut transition-transform active:brightness-[0.85] px-4 py-3 text-sm"
+              >
                 PRESALE
-              </button>
+              </Link>
               <FiX
                 onClick={() => {
                   setIsOpen(false);

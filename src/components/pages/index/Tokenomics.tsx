@@ -3,15 +3,17 @@
 import Chip from "@/components/Chip";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import BottomDecoration from "@/components/BottomDecoration";
+import TopBrackets from "@/components/TopBrackets";
 
 export default function Tokenomics() {
   return (
-    <div className="mt-32 mx-auto max-w-[1440px]">
+    <div className="mt-32 pb-28 -mx-5 md:-mx-12 px-5 relative md:px-12 bg-[#DCDCDC]">
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="font-bold text-5xl md:text-6xl pt-16 text-center"
+        className="font-bold text-5xl md:text-6xl pt-16 text-center text-black"
       >
         Tokenomics
       </motion.h2>
@@ -37,10 +39,11 @@ export default function Tokenomics() {
       >
         <Image
           alt="tokenomics pie chart"
-          src={"/chart.webp"}
-          width={785}
-          height={393}
-          className="mx-auto mt-32    "
+          src={"/chart.png"}
+          width={1273}
+          height={345}
+          quality={100}
+          className="mx-auto mt-32"
         />
       </motion.div>
 
@@ -55,11 +58,11 @@ export default function Tokenomics() {
           src={"/bar.webp"}
           width={1224}
           height={57}
-          className="mx-auto mt-16 w-full max-sm:hidden max-w-[1224px]"
+          className="mx-auto mt-32 w-full max-sm:hidden max-w-[1224px]"
         />
       </motion.div>
 
-      <div className="mt-32 grid lg:grid-cols-2 max-lg:divide-y-2  lg:divide-x-2 divide-dashed">
+      <div className="mt-32 grid lg:grid-cols-2 max-lg:divide-y-2  lg:divide-x-2 divide-dashed divide-black">
         <motion.ul
           layout
           initial="hidden"
@@ -89,6 +92,8 @@ export default function Tokenomics() {
           ))}
         </motion.ul>
       </div>
+      <BottomDecoration color="black" />
+      <TopBrackets color="black" />
     </div>
   );
 }
