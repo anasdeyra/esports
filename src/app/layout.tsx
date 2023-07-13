@@ -1,12 +1,10 @@
-"use client";
-
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Socials from "@/components/Socials";
 import RootStyleRegistry from "./emotion";
-import { usePathname } from "next/navigation";
+import { headers } from "next/headers";
 
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -22,9 +20,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
+  const headersList = headers();
+  const pathname = headersList.get("x-invoke-path");
 
-  const showNavbar = PAGES.includes(pathname);
+  const showNavbar = PAGES.includes(pathname ?? "");
 
   return (
     <html lang="en">
