@@ -39,15 +39,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex gap-x-16 max-sm:gap-x-8 mt-32 mx-auto w-fit"
+          className="flex relative gap-x-16 max-sm:gap-x-8 mt-32 mx-auto w-fit"
         >
           <Link
             href={"/pre-sale"}
-            className="max-sm:text-base max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold"
+            className="max-sm:text-base relative glitch max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold"
           >
             JOIN NOW
           </Link>
-          <button className="max-sm:text-sm max-sm:px-6 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold">
+
+          <button className="relative glitch-white max-sm:text-sm max-sm:px-6 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold">
             WHITE PAPER
           </button>
         </motion.div>

@@ -1,10 +1,9 @@
 "use client";
+import { motion } from "framer-motion";
 
 import BottomDecoration from "@/components/BottomDecoration";
 import TopBrackets from "@/components/TopBrackets";
 import TopDecoration from "@/components/TopDecoration";
-import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Vision() {
   return (
@@ -99,7 +98,7 @@ export default function Vision() {
           initial={"hidden"}
           whileInView={"show"}
           variants={container}
-          className="pl-8 border-l border-black border-dashed mt-8 text-xl font-light list-disc max-w-xl lg:ml-32"
+          className="pl-8 border-l border-black border-dashed mt-8 text-xl font-light list-disc max-w-xl lg:ml-32 xl:ml-56"
         >
           <motion.li variants={child}>
             Host a wide variety of events: uch as player meet and greet,

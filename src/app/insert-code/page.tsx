@@ -18,7 +18,7 @@ export default function InsertCode() {
     router.push("/");
   };
   return (
-    <div className="-mx-5 md:-mx-12 px-5 md:px-12 bg-[#DCDCDC] pb-52 pt-24 relative">
+    <div className="-mx-5 md:-mx-12 px-5 min-h-screen md:px-12 bg-[#DCDCDC] pb-52 pt-24 relative">
       <div className="max-w-[1289px] mx-auto flex justify-between items-center">
         <Image
           style={{ boxShadow: "3px 8px 3px 0px rgba(0, 0, 0, 0.25)" }}

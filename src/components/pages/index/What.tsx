@@ -38,7 +38,7 @@ export default function What() {
             <span className="block font-light text-xl">What is </span>
             E-Sports DAO?
           </h1>
-          <p className="mt-16 max-w-[735px] text-xl md:text-3xl font-light">
+          <p className="mt-16 mix-blend-difference text-white max-w-[735px] text-xl md:text-3xl font-light">
             E-sports DAO is a community that builds and provides the E-sports
             industry. On early stage we will focus on building an E-sports team
             in Indonesia and after that we will expand to the world wide. Our
@@ -50,9 +50,11 @@ export default function What() {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mx-auto md:mx-0 md:ml-auto block mt-14  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold"
+          className="mx-auto relative md:mx-0 md:ml-auto block mt-14  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold"
         >
-          <Link href={"/about-us"}>EXPLORE</Link>
+          <Link className="glitch-white" href={"/about-us"}>
+            EXPLORE
+          </Link>
         </motion.button>
       </div>
 
