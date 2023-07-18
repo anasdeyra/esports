@@ -23,19 +23,19 @@ export default function Failed() {
       </div>
       <div className="relative px-12 pb-20 pt-14 md:px-32 max-w-[1289px] mx-auto mt-12">
         <Image
-          className="mx-auto"
+          className="mx-auto z-0"
           src="/x.png"
           alt="failed"
           width={128}
           height={128}
         />
-        <h1 className="text-black font-bold  text-5xl md:text-6xl text-center mt-6">
+        <h1 className="z-[10] relative text-black font-bold  text-5xl md:text-6xl text-center mt-6">
           Uh - oh your code was invalid!
         </h1>
-        <h2 className="mt-6 font-light text-black text-4xl text-center">
+        <h2 className="z-[10] relative mt-6 font-light text-black text-4xl text-center">
           Please check your code again and comeback later
         </h2>{" "}
-        <button className=" max-sm:text-base mx-auto mt-12 block max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold">
+        <button className=" z-[10] relative max-sm:text-base mx-auto mt-12 block max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold">
           BACK TO HOME
         </button>
         {/* border  */}
