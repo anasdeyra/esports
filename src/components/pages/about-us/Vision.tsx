@@ -83,7 +83,7 @@ export default function Vision() {
           className="pl-8 border-l border-dashed border-black mt-12  text-xl font-light list-disc max-w-xl"
         >
           <motion.li variants={child}>
-            Holding small tournaments every month and big tournaments every year
+            Organize monthly tournaments and Yearly League
           </motion.li>
           <motion.li variants={child}>
             Form an international esports team

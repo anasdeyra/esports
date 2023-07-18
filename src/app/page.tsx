@@ -1,3 +1,4 @@
+import Distribution from "@/components/pages/index/Distribution";
 import Hero from "@/components/pages/index/Hero";
 import Polygon from "@/components/pages/index/Polygon";
 import Roadmap from "@/components/pages/index/Roadmap";
@@ -12,6 +13,7 @@ export default function Home() {
       <What />
       <Supply />
       <Tokenomics />
+      <Distribution />
       <Roadmap />
       <Polygon />
     </>

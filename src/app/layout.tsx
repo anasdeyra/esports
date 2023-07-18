@@ -46,4 +46,12 @@ export default function RootLayout({
   );
 }
 
-export const PAGES = ["/", "/about-us", "/pre-sale", "/terms-and-agreement"];
+export const PAGES = [
+  "/",
+  "/about-us",
+  "/pre-sale",
+  "/terms-and-agreement",
+  "/payment-method",
+  "/sender",
+  "/success",
+];

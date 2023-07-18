@@ -2,35 +2,50 @@
 
 import BottomDecoration from "@/components/BottomDecoration";
 import TopBrackets from "@/components/TopBrackets";
-import { FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { notifications } from "@mantine/notifications";
+
+type Inputs = {
+  firstName: string;
+  lastName: string;
+  walletAddress: string;
+  amount: number;
+  email: string;
+};
 
 export default function PreSale() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = {
-      firstName: form.firstName.value,
-      lastName: form.lastName.value,
-      walletAddress: form.walletAddress.value,
-      amount: form.amount.value,
-      email: form.email.value,
-    };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isLoading, isSubmitting },
+  } = useForm<Inputs>({ reValidateMode: "onBlur" });
 
-    fetch("/api/pre-sale", {
+  const router = useRouter();
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    return await fetch("/api/pre-sale", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+    }).then((res) => {
+      if (res.status === 200)
+        return router.push(`/payment-method?amount=${data.amount}`);
+      notifications.show({
+        title: "There was a problem submitting your form",
+        message: "Sorry for the inconvenience! 🤥",
+        color: "red",
       });
+    });
   };
+
+  const errorMessages = Object.values(errors).map(({ message }) => message);
+
   return (
     <div className="-mx-5 md:-mx-12 px-5 md:px-12 bg-[#DCDCDC] pb-52 pt-24 relative">
       <div className="relative grid md:grid-cols-[90%_10%] px-0 py-7 md:px-16 xl:px-32 max-w-[1289px] mx-auto mt-12">
@@ -39,38 +54,51 @@ export default function PreSale() {
             Join Presale
           </h1>
           <form
-            onSubmit={handleSubmit}
-            className="relative z-[1] gap-x-8 gap-y-12 md:grid-cols-2 grid mt-12 md:mt-14"
+            onSubmit={handleSubmit(onSubmit)}
+            className="relative z-[1] gap-x-8 gap-y-12 grid-cols-1 md:grid-cols-2 flex flex-col md:grid mt-12 md:mt-14"
           >
             <input
               required
               placeholder="First Name"
-              name="firstName"
               type="text"
-              className=" px-3 py-5  block border border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
+              {...register("firstName")}
+              className={`border-0 ring-1 ring-inset ${
+                errors.firstName
+                  ? "ring-red-600 focus:ring-red-600"
+                  : "ring-[#6d6d6d] focus:ring-[#8d8d8d]"
+              } focus:ring-2 focus:ring-inset  px-3 py-5  block   placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent`}
             />
             <input
               required
               placeholder="Last Name"
-              name="lastName"
+              {...register("lastName")}
               type="text"
-              className=" px-3 py-5  block border border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
+              className="border-0 ring-1 ring-inset ring-[#6d6d6d] focus:ring-2 focus:ring-inset focus:ring-[#8d8d8d] px-3 py-5  block   placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
             />
             <input
               required
               placeholder="Wallet Address"
-              name="walletAddress"
+              {...register("walletAddress")}
               type="text"
-              className=" px-3 py-5  block border h-fit border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
+              className="border-0 ring-1 ring-inset ring-[#6d6d6d] focus:ring-2 focus:ring-inset focus:ring-[#8d8d8d] px-3 py-5  block  h-fit  placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
             />
             <div>
               <input
                 required
                 placeholder="Amount"
                 defaultValue={30000}
-                name="amount"
+                {...register("amount", {
+                  min: {
+                    value: 30000,
+                    message: "Amount must be atleast 30000!",
+                  },
+                })}
                 type="number"
-                className="w-full px-3 py-5  block border border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
+                className={`border-0 ring-1 ring-inset ${
+                  errors.amount
+                    ? "ring-red-600 focus:ring-red-600"
+                    : "ring-[#6d6d6d] focus:ring-[#8d8d8d]"
+                } focus:ring-2 focus:ring-inset  w-full px-3 py-5 block   placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent`}
               />
               <span className="text-sm text-[#ACACAC] mt-1">
                 *Min. 1 BNB ≈ $200
@@ -79,11 +107,18 @@ export default function PreSale() {
             <input
               required
               placeholder="Email Address"
-              name="email"
+              {...register("email")}
               type="email"
-              className="md:col-span-2 md:-mt-5 px-3 py-5  block border border-[#6D6D6D] placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
+              className="border-0 ring-1 ring-inset ring-[#6d6d6d] focus:ring-2 focus:ring-inset focus:ring-[#8d8d8d] md:col-span-2 md:-mt-5 px-3 py-5  block   placeholder:text-[#6D6D6D] text-xl font-light text-black bg-transparent"
             />
             <div className="relative z-[1] col-span-2 -mt-7">
+              <ul className="flex gap-1 flex-col mb-2 list-disc ml-4">
+                {errorMessages.map((m, i) => (
+                  <li key={i} className="text-sm text-red-600">
+                    {m}
+                  </li>
+                ))}
+              </ul>
               <div className="flex items-center mb-4">
                 <input
                   required
@@ -99,12 +134,13 @@ export default function PreSale() {
                   <Link href={"/terms-and-agreement"}>Terms & Agreement</Link>
                 </label>
               </div>
-              <div className="mt-4 flex items-start justify-start w-full">
+              <div className="mt-4 flex max-md:flex-col gap-y-4 items-start justify-start w-full">
                 <button
+                  disabled={isSubmitting}
                   type="submit"
                   className=" max-sm:text-base max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold"
                 >
-                  Join Presale
+                  {isSubmitting ? "Submitting..." : "Join Presale"}
                 </button>
                 <p className="text-sm text-[#424344] ml-4 md:ml-24 max-w-xs">
                   Stay up to date with the latest developments in the E-Sports

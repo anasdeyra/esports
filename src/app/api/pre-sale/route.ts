@@ -1,24 +1,24 @@
-import { PrismaClient } from "@prisma/client";
 import { type NextRequest, NextResponse } from "next/server";
-
-const prisma = new PrismaClient();
-
-async function main(data: any) {
-  // ... you will write your Prisma Client queries here
-  await prisma.presale.create({ data });
-}
+import sg from "@sendgrid/mail";
 
 export const POST = async (req: NextRequest) => {
   const body = await req.json();
+  sg.setApiKey(process.env.SENDGRID_API_KEY ?? "");
+  const msg = {
+    to: "anasamazon607@gmail.com",
+    from: "anasdoura607@gmail.com",
+    subject: "test",
+    text: JSON.stringify(body),
+  };
 
-  const res = await main(body)
-    .then(async () => {
-      await prisma.$disconnect();
-      return NextResponse.json("zzs");
+  const res = sg
+    .send(msg)
+    .then(() => {
+      return NextResponse.json("ok");
     })
-    .catch(async (e) => {
-      console.error(e);
-      await prisma.$disconnect();
+    .catch((er) => {
+      console.log(er);
+
       return NextResponse.error();
     });
 

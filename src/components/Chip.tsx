@@ -5,7 +5,7 @@ export default function Chip({
 }: {
   color: string;
   text: string;
-  percentage: string;
+  percentage?: string;
 }) {
   return (
     <li className="relative text-black text-center w-[250px] md:w-[350px] justify-between pr-6 font-light text-sm md:text-xl py-4  flex pl-8">
@@ -22,7 +22,7 @@ export default function Chip({
         />
       </svg>
       <span>{text}</span>
-      <span>{percentage}</span>
+      {percentage && <span>{percentage}</span>}
     </li>
   );
 }
