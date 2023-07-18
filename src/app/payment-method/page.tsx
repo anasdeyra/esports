@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import TopBrackets from "@/components/TopBrackets";
 import BottomDecoration from "@/components/BottomDecoration";
 
-export default function payment() {
+export default function Payment() {
   const params = useSearchParams();
   const amount = Number(params.get("amount"));
   const router = useRouter();

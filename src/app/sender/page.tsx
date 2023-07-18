@@ -18,7 +18,7 @@ type Inputs = {
   image: File;
 };
 
-export default function page() {
+export default function Sender() {
   const {
     register,
     handleSubmit,
