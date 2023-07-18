@@ -39,11 +39,11 @@ export default function What() {
             E-Sports DAO?
           </h1>
           <p className="mt-16 mix-blend-difference text-white max-w-[735px] text-xl md:text-3xl font-light">
-            E-sports DAO is a community that builds and provides the E-sports
-            industry. On early stage we will focus on building an E-sports team
-            in Indonesia and after that we will expand to the world wide. Our
-            product will be a gaming shop that provides in-game items,
-            Merchandise, Advertising, etc.
+            Esports, a rapidly growing sector with a huge fan base, offers
+            immense opportunities for innovation and growth. This project seeks
+            to address the challenges and limitations faced by players, teams,
+            and organizations, while enhancing fan engagement and community
+            building.
           </p>
         </motion.div>
         <motion.button
