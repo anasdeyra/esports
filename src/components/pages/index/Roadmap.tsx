@@ -153,6 +153,72 @@ export default function Roadmap() {
               </motion.div>
             ))}
           </div>
+          <div className="flex flex-col gap-14 mt-32">
+            {TBD.slice(0, 2).map((q, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex justify-between"
+                key={i}
+              >
+                <div className="flex flex-col">
+                  <h3 className="font-bold text-4xl">{q}</h3>
+                  <p className="font-bold text-4xl mt-4">TBD</p>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0.5, rotateY: 180 }}
+                  whileInView={{ opacity: 1, rotateY: 360 }}
+                  transition={{ duration: 0.5 }}
+                  className=" w-fit h-fit bg-no-repeat py-16 px-8 max-md:hidden"
+                  style={{
+                    backgroundImage: "url(/a.webp)",
+                    backgroundSize: "100% 100%",
+                    backgroundPosition: "center 0",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <span className="font-bold text-5xl md:text-6xl text-center block">
+                    {q.substring(0, 2)} <br />
+                    {q.substring(2)}
+                  </span>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-14 mt-32">
+            {TBD.slice(2).map((q, i) => (
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="grid md:grid-cols-[1fr_minmax(0,360px)] justify-end md:justify-between"
+                key={i}
+              >
+                <motion.div
+                  initial={{ opacity: 0.5, rotateY: 180 }}
+                  whileInView={{ opacity: 1, rotateY: 360 }}
+                  transition={{ duration: 0.5 }}
+                  className=" w-fit h-fit bg-no-repeat py-16 px-8 max-md:hidden"
+                  style={{
+                    backgroundImage: "url(/a.webp)",
+                    backgroundSize: "100% 100%",
+                    backgroundPosition: "center 0",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <span className="font-bold text-5xl md:text-6xl text-center block">
+                    {q.substring(0, 2)} <br />
+                    {q.substring(2)}
+                  </span>
+                </motion.div>
+                <div className="flex flex-col">
+                  <h3 className="font-bold text-4xl text-right">{q}</h3>
+                  <p className="font-bold text-4xl text-right mt-4">TBD</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
       <BottomDecoration />
@@ -224,3 +290,5 @@ const QUARTERS = [
     ],
   },
 ];
+
+const TBD = ["Q2 2024", "Q3 2024", "Q4 2024", "Q1 2025"];
