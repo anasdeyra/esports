@@ -45,7 +45,10 @@ export default function Payment() {
             fill="#000000"
           />
         </motion.svg>
-        <div className="mt-28 py-14 grid md:grid-cols-2 md:grid-rows-2 w-fit mx-auto gap-y-8 gap-x-20 md:gap-y-28 relative">
+        <p className="text-xl text-center font-bold text-black mt-20">
+          Amount to pay: {amount * 100}
+        </p>
+        <div className="mt-12 py-14 grid md:grid-cols-2 md:grid-rows-2 w-fit mx-auto gap-y-8 gap-x-20 md:gap-y-28 relative">
           <img
             src="/dv.png"
             className="absolute h-full w-full top-0 left-0 max-md:hidden"
@@ -59,7 +62,7 @@ export default function Payment() {
             }}
             className="active:scale-95 z-[2]"
             onClick={() => {
-              router.push(`/sender?method=bca?amount=${amount}`);
+              router.push(`/sender?method=bca&amount=${amount}`);
             }}
           />
           <button
@@ -70,7 +73,7 @@ export default function Payment() {
             }}
             className="active:scale-95 z-[2]"
             onClick={() => {
-              router.push(`/sender?method=eth?amount=${amount}`);
+              router.push(`/sender?method=eth&amount=${amount}`);
             }}
           />
           <button
@@ -81,7 +84,7 @@ export default function Payment() {
             }}
             className="active:scale-95 z-[2]"
             onClick={() => {
-              router.push(`/sender?method=paypal?amount=${amount}`);
+              router.push(`/sender?method=paypal&amount=${amount}`);
             }}
           />
           <button
@@ -92,7 +95,7 @@ export default function Payment() {
             }}
             className="active:scale-95 z-[2]"
             onClick={() => {
-              router.push(`/sender?method=bnb?amount=${amount}`);
+              router.push(`/sender?method=bnb&amount=${amount}`);
             }}
           />
         </div>

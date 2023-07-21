@@ -7,8 +7,10 @@ import Image from "next/image";
 import { FileUploader } from "react-drag-drop-files";
 import { BiImageAdd } from "react-icons/bi";
 import { notifications } from "@mantine/notifications";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import FormData from "form-data";
+import { useMemo } from "react";
+import Link from "next/link";
 
 const fileTypes = ["JPG", "PNG"];
 
@@ -35,6 +37,9 @@ export default function Sender() {
     setValue("image", file);
   };
 
+  const params = useSearchParams();
+  const method = params.get("method");
+
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const formData = new FormData();
 
@@ -55,6 +60,34 @@ export default function Sender() {
       });
     });
   };
+
+  const view = useMemo(() => {
+    switch (method) {
+      case "bca":
+        return (
+          <span>
+            a/n Mohamad Rizki Ardhiana <br />
+            1092584652
+          </span>
+        );
+      case "eth":
+        return <>0xD55605e4c2F86918c50b6d903a9fC837C1155499</>;
+      case "bnb":
+        return <>0xD55605e4c2F86918c50b6d903a9fC837C1155499</>;
+      case "paypal":
+        return (
+          <Link
+            className="hover:underline"
+            target="_blank"
+            href="https://www.paypal.me/EsportsDAO"
+          >
+            https://www.paypal.me/EsportsDAO
+          </Link>
+        );
+      default:
+        return <>no payment method is selected</>;
+    }
+  }, [method]);
 
   return (
     <div className=" pb-56 min-h-screen -mx-5 md:-mx-12 px-5 relative md:px-12 bg-[#DCDCDC]">
@@ -83,8 +116,11 @@ export default function Sender() {
             fill="#000000"
           />
         </motion.svg>
+        <div className="mt-8 font-medium text-xl text-black text-center">
+          {view}
+        </div>
         <Image
-          src={"/method.png"}
+          src={`/${method}-method.png`}
           alt="method"
           width={137}
           height={71}
