@@ -41,19 +41,19 @@ export const SOCIALS: { Icon: IconType; link: string }[] = [
     Icon: FaGithub,
   },
   {
-    link: "/#",
+    link: "https://medium.com/@esportsdao.ofc/https-linktr-ee-esports-dao-e043461b8898",
     Icon: FaMedium,
   },
   {
-    link: "/#",
+    link: "https://instagram.com/ardiiaanaaa?igshid=OGQ5ZDc2ODk2ZA==",
     Icon: FaInstagram,
   },
   {
-    link: "/#",
+    link: "https://facebook.com/groups/983804452808447/?ref=share&mibextid=S66gvF",
     Icon: FaFacebookMessenger,
   },
   {
-    link: "/#",
+    link: "https://twitter.com/esportsdao_ofc",
     Icon: FaTwitter,
   },
 ];
