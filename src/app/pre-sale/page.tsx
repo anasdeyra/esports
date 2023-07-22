@@ -51,7 +51,7 @@ export default function PreSale() {
       <div className="relative grid md:grid-cols-[90%_10%] px-0 py-7 md:px-16 xl:px-32 max-w-[1289px] mx-auto mt-12">
         <div>
           <h1 className="md:ml-8 font-bold text-3xl text-black  max-md:text-center">
-            Join Presale
+            Join Private Sale
           </h1>
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -140,7 +140,7 @@ export default function PreSale() {
                   type="submit"
                   className=" max-sm:text-base max-sm:px-7 max-sm:py-3  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn px-10 py-5 text-xl font-bold"
                 >
-                  {isSubmitting ? "Submitting..." : "Join Presale"}
+                  {isSubmitting ? "Submitting..." : "Join Private Sale"}
                 </button>
                 <p className="text-sm text-[#424344] ml-4 md:ml-24 max-w-xs">
                   Stay up to date with the latest developments in the E-Sports

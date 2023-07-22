@@ -7,15 +7,7 @@ import Link from "next/link";
 
 export default function What() {
   return (
-    <div
-      style={{
-        backgroundImage: "url('/what.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 0",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="-mx-5 md:-mx-12 px-5 md:px-12 pt-48 pb-56 relative"
-    >
+    <div className="bg-[#DCDCDC] -mx-5 md:-mx-12 bg-no-repeat bg-[url('/what.png')] px-5 md:px-12 pt-48 pb-56 relative bg-cover bg-center max-sm:bg-[url('/what-mobile.png')]">
       <div className="w-fit text-black">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -38,7 +30,7 @@ export default function What() {
             <span className="block font-light text-xl">What is </span>
             E-Sports DAO?
           </h1>
-          <p className="mt-16 mix-blend-difference text-white max-w-[735px] text-xl md:text-3xl font-light">
+          <p className="mt-16 max-sm:text-white max-sm:mix-blend-difference text-black max-w-[735px] text-xl md:text-3xl font-light">
             Esports, a rapidly growing sector with a huge fan base, offers
             immense opportunities for innovation and growth. This project seeks
             to address the challenges and limitations faced by players, teams,
@@ -50,9 +42,9 @@ export default function What() {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mx-auto relative md:mx-0 md:ml-auto block mt-14  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-alt px-10 py-5 text-xl font-bold"
+          className="mx-auto relative md:mx-0 md:mr-auto block mt-14  hover:-translate-y-1 active:translate-y-0 active:brightness-[0.85] hero-btn-black px-10 py-5 text-xl font-bold"
         >
-          <Link className="glitch-white" href={"/about-us"}>
+          <Link className="glitch-black" href={"/about-us"}>
             EXPLORE
           </Link>
         </motion.button>

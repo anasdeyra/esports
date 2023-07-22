@@ -35,7 +35,7 @@ export default function Drawer({ children, isOpen, setIsOpen }: DrawerProps) {
                 href={"/pre-sale"}
                 className="glitch btn-cut transition-transform active:brightness-[0.85] px-4 py-3 text-sm"
               >
-                PRESALE
+                Private Sale
               </Link>
               <FiX
                 onClick={() => {

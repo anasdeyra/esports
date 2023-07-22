@@ -54,9 +54,9 @@ export default function Navbar() {
               </ul>
               <Link
                 href={"/pre-sale"}
-                className="text-lg px-5 py-4 ml-4 xl:ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0"
+                className="text-lg max-[1440px]:text-sm px-5 py-4 ml-4 xl:ml-12 glitch btn-cut hover:-translate-y-1 transition-transform active:brightness-[0.85] active:translate-y-0"
               >
-                PRESALE
+                PRIVATE SALE
               </Link>
             </div>
           </div>
