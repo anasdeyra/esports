@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 export default function Roadmap() {
   return (
     <div
+      id="roadmap"
       style={{
         backgroundImage: "url('/roadmap.png')",
         backgroundSize: "cover",
