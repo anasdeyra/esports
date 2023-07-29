@@ -14,7 +14,7 @@ import {
 
 export default function Socials() {
   return (
-    <nav className="hidden fixed top-1/2 gap-3 md:flex flex-col -translate-y-1/2 left-0 px-2 min-w-[1440px]:px-8 z-10">
+    <nav className="fixed pt-[84px] top-1/2 gap-3 flex flex-col -translate-y-1/2 left-0 px-2 min-w-[1440px]:px-8 z-10">
       {SOCIALS.map(({ Icon, link }, i) => (
         <Link
           target="_blank"
